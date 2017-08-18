@@ -1,0 +1,22 @@
+{
+    "": {
+        "welcome": "Welcome!",
+        "hello_there": "Hello, there.",
+        "how_are_you": "How are you?",
+        "i_am_good": "I am good.",
+        "count_money": "I have {0} dollars."
+    },
+    "en-UK": {
+        "welcome": "Cheerio!",
+        "how_are_you": "Would you like some tea?",
+        "i_am_good": "Indubitably.",
+        "count_money": "I have {0} pounds."
+    },
+    "es": {
+        "welcome": "Bienvenidos!",
+        "hello_there": "Hola.",
+        "how_are_you": "¿Cómo está?",
+        "i_am_good": "Estoy bien.",
+        "count_money": "Tengo {0} dólares."
+    }
+}

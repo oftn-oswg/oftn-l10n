@@ -1,0 +1,14 @@
+{
+  "name": "oftn-l10n",
+  "version": "0.1.0",
+  "description": "Android-style localization for ES6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OFTN Inc.",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.5.5"
+  }
+}
