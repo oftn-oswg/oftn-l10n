@@ -98,10 +98,12 @@ It looks at every comment looking for `<identifier>.<property> = <string>`. If t
 type LanguageTag = string; // IETF language tag or "" for defaults
 type LanguageReference = string; // Relative path to localization file to include
 
+interface LanguageDictionary {
+    [name: string]: string | undefined;
+}
+
 interface Localization {
-  [tag: LanguageTag]: LanguageReference | {
-    [string_name: string]: string | undefined;
-  } | undefined;
+  [tag: LanguageTag]: LanguageReference | LanguageDictionary | undefined;
 }
 ```
 
