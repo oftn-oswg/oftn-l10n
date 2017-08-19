@@ -4,12 +4,20 @@
   "description": "Android-style localization for ES6",
   "keywords": ["localization", "internationalization", "i18n", "l10n", "oftn", "translation", "translating", "language", "locale", "lang"],
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oftn-oswg/oftn-l10n.git"
+  },
   "scripts": {
     "build": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "OFTN Inc.",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oftn-oswg/oftn-l10n/issues"
+  },
+  "homepage": "https://github.com/oftn-oswg/oftn-l10n#readme",
   "devDependencies": {
     "@types/node": "^8.0.24"
   }
