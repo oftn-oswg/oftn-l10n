@@ -94,32 +94,18 @@ It looks at every comment looking for `<identifier>.<property> = <string>`. If t
 
 ## The localization file and best practices
 
-```js
-Localization ::
-  '{' LanguageDefinition+ '}'
+```ts
+type LanguageTag = string; // IETF language tag or "" for defaults
+type LanguageReference = string; // Relative path to localization file to include
 
-LanguageDefinition ::
-  LanguageTag ':' LanguageTagValue
-
-LanguageTag ::
-  StringLiteral // IETF Language Tag or "" for defaults
-
-LanguageTagValue ::
-  SymbolicLink
-  '{' LanguageStringList '}'
-
-SymbolicLink ::
-  StringLiteral // Path to localization file to include
-
-LanguageStringList ::
-  LanguageString
-  LanguageStringList ',' LanguageString
-  
-LanguageString ::
-  StringLiteral ':' StringLiteral
+interface Localization {
+  [tag: LanguageTag]: LanguageReference | {
+    [string_name: string]: string | undefined;
+  } | undefined;
 }
 ```
-You may split up your localizations into multiple files for translators. 
+
+You may split up your localizations into multiple files for translators using a link. Linked files are loaded on-demand when necessary.
 
 ### localizations/all.json
 
