@@ -2,13 +2,15 @@
   "name": "oftn-l10n",
   "version": "0.1.0",
   "description": "Android-style localization for ES6",
+  "keywords": ["localization", "internationalization", "i18n", "l10n", "oftn", "translation", "translating", "language", "locale", "lang"],
   "main": "index.js",
   "scripts": {
+    "build": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "OFTN Inc.",
   "license": "MIT",
   "devDependencies": {
-    "webpack": "^3.5.5"
+    "@types/node": "^8.0.24"
   }
 }
