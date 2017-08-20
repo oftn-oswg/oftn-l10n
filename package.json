@@ -1,6 +1,6 @@
 {
   "name": "oftn-l10n",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Android-style localization for ES6",
   "keywords": ["localization", "internationalization", "i18n", "l10n", "oftn", "translation", "translating", "language", "locale", "lang"],
   "main": "index.js",

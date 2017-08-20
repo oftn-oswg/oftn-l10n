@@ -1,10 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const fs = require('fs');
 const path = require('path');
-const util = require('util');
-function look(obj, name) {
-    console.log(name, util.inspect(obj, { colors: true }));
-}
 const default_lang = '';
 const default_path = './localizations/all.json';
 class Localizer {
@@ -19,10 +16,17 @@ class Localizer {
     apply(options) {
         Object.assign(this.options, options);
     }
+    getLocalization(filename) {
+        const data = fs.readFileSync(filename, { encoding: 'utf8' });
+        return JSON.parse(data);
+    }
     // Adds localizations given by the path.
     load(filename, from, recurse) {
         const current = path.resolve(from, filename);
-        const localization = require(current);
+        const localization = this.getLocalization(current);
+        if (!localization) {
+            return;
+        }
         for (const tag in localization) {
             let source_object = localization[tag];
             let dest_object = this.data[tag];

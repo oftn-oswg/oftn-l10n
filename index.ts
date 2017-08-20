@@ -1,9 +1,5 @@
+const fs = require('fs');
 const path = require('path');
-const util = require('util');
-
-function look(obj: any, name: string) {
-  console.log(name, util.inspect(obj, { colors: true }));
-}
 
 interface Dictionary {
   [key: string]: string | undefined;
@@ -54,10 +50,18 @@ export class Localizer {
     Object.assign(this.options, options);
   }
 
+  getLocalization(filename: string): Localization {
+    const data = fs.readFileSync(filename, { encoding: 'utf8' });
+    return <Localization>JSON.parse(data);
+  }
+
   // Adds localizations given by the path.
   load(filename: string, from: string, recurse: boolean) {
     const current = path.resolve(from, filename);
-    const localization = <Localization>require(current);
+    const localization = this.getLocalization(current);
+    if (!localization) {
+      return;
+    }
 
     for (const tag in localization) {
       let source_object = localization[tag];
