@@ -1,8 +1,19 @@
 {
   "name": "oftn-l10n",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Android-style localization for ES6",
-  "keywords": ["localization", "internationalization", "i18n", "l10n", "oftn", "translation", "translating", "language", "locale", "lang"],
+  "keywords": [
+    "localization",
+    "internationalization",
+    "i18n",
+    "l10n",
+    "oftn",
+    "translation",
+    "translating",
+    "language",
+    "locale",
+    "lang"
+  ],
   "main": "index.js",
   "repository": {
     "type": "git",
