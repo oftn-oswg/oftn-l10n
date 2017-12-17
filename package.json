@@ -20,7 +20,6 @@
     "url": "git+https://github.com/oftn-oswg/oftn-l10n.git"
   },
   "scripts": {
-    "build": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "OFTN Inc.",
@@ -28,8 +27,5 @@
   "bugs": {
     "url": "https://github.com/oftn-oswg/oftn-l10n/issues"
   },
-  "homepage": "https://github.com/oftn-oswg/oftn-l10n#readme",
-  "devDependencies": {
-    "@types/node": "^8.0.24"
-  }
+  "homepage": "https://github.com/oftn-oswg/oftn-l10n#readme"
 }
